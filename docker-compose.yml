@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  generate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: generate_backend
+    container_name: generate_backend_container
+    ports:
+      - 5792:5792
+    volumes:
+      - .:/app
+      - /app/node_modules
